@@ -1,0 +1,491 @@
+// bootstrap
+
+@import 'bootstrap/variables.less';
+@import 'bootstrap/bootstrap';
+
+// imports
+
+@import 'slices/base.less';
+@import 'slices/fonts.less';
+
+// structure elements
+
+section.black {
+    box-shadow: inset 0 0 30px #000;
+}
+
+section, header {
+    width:100%;
+    position:relative;
+    &.black {
+        background: url(../images/backgrounds/bg-black.jpg) repeat center center;
+    }
+    &.wooden {
+        background: url(../images/backgrounds/bg-wood.png) repeat center center;
+        margin-top:20px;
+        padding-bottom:90px;
+        padding-top:50px;
+        .line-top {
+            background: url(../images/backgrounds/bg-wood-top.png) repeat-x center center;
+            height:21px;
+            position:absolute;
+            top:-20px;
+            left:0;
+            right:0;
+            width:100%;
+        }
+        .line-bottom {
+            background: url(../images/backgrounds/bg-wood-bottom.png) repeat-x center center;
+            height:21px;
+            position:absolute;
+            bottom:-20px;
+            left:0;
+            right:0;
+            width:100%;
+        }
+        margin-bottom:20px;
+    }
+}
+
+// page's header
+
+
+body {
+   padding-top: 118px;
+}
+
+#top {
+    z-index:6666666 !important;
+}
+.top .app-buttons {
+    display: none;
+}
+.top {
+    top:0;
+    height:118px;
+    z-index:6666666 !important;
+    position:absolute;
+
+    padding-top:25px;
+    &.toggled {
+        .app-buttons {
+            display: inline-block;
+            position:absolute;
+            top:0px;
+            right:550px;
+            img {
+                width: 250px;       
+            }
+        }
+        background:#111;
+    }
+    .logo {
+        float: left;
+    }
+    .right {
+        margin-top:15px;
+        text-align:right;
+        .phone {
+            font-family:@fontLight;
+            color:@colorWhite;
+            font-size:30px;
+        }
+    }
+    .buttons {
+        margin-top:12px;
+    }
+    .button {
+        font-family:@fontRegular;
+        color: fade(@colorWhite,90%);
+        font-size:12px;
+        padding:8px 27px;
+        margin-left:10px;
+        border:1px solid fade(@colorWhite,90%);
+        border-radius:10px;
+
+        &.register {
+            padding-left:35px;
+        }
+        i {
+            display:inline-block;
+            margin-left:10px;
+        }
+        &:hover {
+            background:@colorYellow;
+            border-color:@colorYellow;
+            color:#000;
+        }
+    }
+}
+
+// header section
+
+.section-top {
+    height:520px;
+    padding-top:30px;
+    .app-buttons {
+        margin-left:-8px;
+        margin-top:40px;
+    }
+    text-align:center;
+    .caption {
+        text-align: left;
+        margin-top:65px;
+        font-size:26px;
+        line-height:40px;
+        color:@colorWhite;
+        padding-left:50px;
+        p {
+            text-transform:uppercase;
+            font-family:@fontBold;
+            max-width:440px;
+        }
+        span {
+            font-family:@fontLight;
+            b {
+                font-family:@fontRegular;
+                color:@colorWhite;
+            }
+        }
+        b {
+            color:@colorYellow;
+        }
+        hr {
+            margin-left:0;
+            max-width:90%;
+            opacity:.5;
+        }
+    }
+
+    .image {
+        margin-top:40px;
+        padding-right:50px;
+        text-align:center;
+    }
+    .center {
+        display:inline-block;
+        background:fade(#000,50%);
+        position:relative;
+        margin:30px auto;
+        padding:4px;
+    }
+    .center, .buttons {
+        border-radius:30px;
+        text-align:center;
+        font-family:@fontLight;
+        border-radius:30px;
+    }
+    .buttons {
+        padding:10px 75px;
+        border: 1px solid fade(@colorWhite,10%);
+        a, span {
+            padding-left:30px;
+            padding-right:30px;
+            display: inline-block;
+        }
+        span {
+            color: #7b5e56;
+        }
+    }
+}
+
+// design elements
+
+.elements {
+    position:relative;
+    &.dishes {
+        max-width:450px;
+    }
+    &.apps {
+        max-width:400px;
+        height:500px;
+    }
+    .element {
+        &.plate {
+            z-index:2;
+            top:10px;
+            left:55px;
+        }
+        &.fork {
+            z-index:1;
+            left:10px;
+            top:40px;
+        }
+        &.knife {
+            z-index:1;
+            right:10px;
+            top: 50px;
+        }
+        &.app-1 {
+            left:0;
+            top:0;
+            z-index:2;
+        }
+        &.app-2 {
+            left:130px;
+            top:10px;
+            z-index:1;
+        }
+        &.shroom-1 {
+            right:0;
+        }
+        &.shroom-2 {
+            right:170px;
+            top:80px;
+        }
+        &.garlic {
+            right:0;
+            bottom:0;
+        }
+        &.boss {
+            right:-150px;
+        }
+        &.bike {
+            left:130px;
+            top:10px;
+            background:url(../images/elements/bike.png) center center no-repeat;
+            background-size: cover;
+            width:242px;
+            height:238px;
+        }
+    }
+}
+
+.element {
+    position: absolute;
+    display: inline-block;
+
+}
+
+.absolute {
+    position:absolute;
+}
+
+.social-links {
+    .links {
+        a i {
+            color: @colorWhite;
+            font-size: 33px;
+        }
+    }
+}
+
+.dishes {
+    margin-top:-30px;
+}
+#gift {
+    padding-top:50px;
+}
+
+#footer {
+    padding-bottom:30px;
+}
+
+.social-top a {
+    i {
+        transition:0.4s ease-in-out all;
+    }
+    &:hover i {
+        color: @colorYellow;
+    }
+}
+
+.section-feature {
+    padding:80px 30px 100px 30px;
+    color:@colorWhite;
+    h2,h3,h4 {
+        font-size:24px;
+        text-transform:uppercase;
+        font-family: @fontBold;
+        margin-bottom:30px;
+    }
+    p {
+        font-size:17px;
+        line-height:18px;
+        font-family:@fontLight;
+        margin-top:20px;
+        b {
+            font-weight: normal;
+            color: @colorYellow;
+        }
+    }
+    .image {
+        position:relative;
+        text-align: center;
+        padding-top:10px;
+
+    }
+    .caption {
+        margin-bottom:30px;
+    }
+    hr {
+        margin-left:0;
+        margin-top:40px;
+        margin-bottom:20px;
+        max-width:90%;
+        opacity:.5;
+    }
+    .button {
+        padding:20px 40px;
+        font-size:16px;
+        font-family: @fontBold;
+        border-radius:30px;
+    }
+    .buttons {
+        .button {
+            width:100%;
+        }
+    }
+    &.the-apps {
+        position:relative;
+        .caption {
+            max-width:80%;
+        }
+        .the-food {
+            width:320px;
+            height:360px;
+            bottom: -160px;
+            right:0px;
+            .foods-1 {
+                width:320px;
+                height:360px;
+            }
+        }
+        .app-buttons {
+            margin-top:55px;
+            a {
+                display:block;
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+        }
+    }
+
+    &.black {
+        .button {
+            color:@colorYellow;
+            border: 2px solid @colorYellow;
+            &:hover {
+                background: @colorYellow;
+                border-color: @colorYellow;
+                color:#000;
+            }
+        }
+    }
+    &.wooden {
+        .button {
+            color:@colorWhite;
+            border: 2px solid @colorWhite;
+            &:hover {
+                background:@colorYellow;
+                border-color:@colorYellow;
+                color:#000;
+            }
+        }
+    }
+}
+
+// mobile portrait
+
+.mobile {
+    display: none;
+}
+@media only screen and (max-width : 768px) {
+    .mobile {
+        display: block;
+    }
+
+    .section-top .image, .elements, .elements .element, .image {
+        display: none;
+    }
+
+    .section-top .caption {
+        margin-top:20px;
+    }
+
+    .section-feature .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .section-top {
+        .caption {
+            p {
+                font-size:20px;
+                line-height:26px;
+            }
+            span {
+                font-size:16px;
+                line-height:20px;
+            }
+        }
+        .center {
+            margin: 65px auto;
+        }
+        .buttons {
+            padding:20px 15px;
+        }
+    }
+
+    .top {
+        .logo {
+            width:100px;
+            margin-top:6px;
+            img { width: 100%; }
+        }
+        .right {
+            position:absolute;
+            top:10px;
+            right:10px;
+            float:none;
+            .button {
+                margin-bottom:6px;
+                font-size:10px;
+                display:block;
+                padding:6px 10px;
+                i {
+                    margin-left:3px;
+                }
+            }
+            .phone {
+                padding-right:5px;
+                font-size:20px;
+            }
+        }
+    }
+
+    .section-feature.the-apps .caption {
+        max-width:100%;
+    }
+
+    .app-buttons a {
+        img {
+            width:100%
+        }
+    }
+}
+
+.container {
+    position:relative;
+}
+
+.social-top, .social-buttons {
+    a i {
+        font-size:28px;
+        color:fade(#fff,50%);
+    }
+}
+
+.section-top .social-buttons {
+    i {
+        font-size:36px;
+    }
+    text-align: center;
+    margin: 30px auto;
+}
+
+.social-top {
+    position:absolute;
+    top:15px;
+    right:340px;
+}

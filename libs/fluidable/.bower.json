@@ -1,0 +1,29 @@
+{
+  "name": "fluidable",
+  "version": "1.2.5",
+  "homepage": "https://github.com/andri/fluidable",
+  "authors": [
+    "Andri Sigurðsson <andrisig@gmail.com>"
+  ],
+  "description": "Lightweight, responsive, mobile first grid system",
+  "main": "fluidable.less",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.md",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.2.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.5",
+    "commit": "8e45ab84d3471279bdcace805f9f452a4461db92"
+  },
+  "_source": "git://github.com/andri/fluidable.git",
+  "_target": "~1.2.5",
+  "_originalSource": "fluidable",
+  "_direct": true
+}

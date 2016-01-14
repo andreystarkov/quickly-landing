@@ -1,0 +1,46 @@
+@fontRegular: 'GothamProRegular';
+@fontBold: 'GothamProBold';
+@fontLight: 'GothamProLight';
+@fontMedium: 'GothamProMedium';
+
+@defaultEasing: cubic-bezier(.11,.77,.68,.28);
+@colorYellow: #f4d638;
+@colorWhite: #fff;
+
+body {
+    background: #1c1f22;
+    -webkit-font-smoothing: antialiased;
+    font-family: @fontRegular;
+}
+
+a {
+    transition: all @defaultEasing 0.4s;
+    color: @colorYellow;
+    &:hover {
+        color:lighten(@colorYellow,25%);
+        text-decoration: none;
+    }
+}
+
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
+}
+
+.button {
+    display: inline-block;
+    transition:all @defaultEasing .3s;
+    text-transform:uppercase;
+    text-align: center;
+}
+
+#top, #header {
+    z-index:50;
+}
+
+section, header, footer, main, article, nav, aside { position: relative; }
+
+p { margin-bottom: 18px; }
