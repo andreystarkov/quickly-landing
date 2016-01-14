@@ -107,7 +107,8 @@ $(function() {
             boxClass:     'ani',
             animateClass: 'animated',
             mobile:       false,
-            live:         false
+            live:         false,
+            offset: 40
           }
         );
 
