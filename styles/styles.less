@@ -7,7 +7,7 @@
 
 @import 'slices/base.less';
 @import 'slices/fonts.less';
-
+@import '../libs/animate.css/animate.min.css';
 // structure elements
 
 section.black {
@@ -19,12 +19,14 @@ section, header {
     position:relative;
     &.black {
         background: url(../images/backgrounds/bg-black.jpg) repeat center center;
+
     }
     &.wooden {
         background: url(../images/backgrounds/bg-wood.png) repeat center center;
         margin-top:20px;
         padding-bottom:90px;
         padding-top:50px;
+
         .line-top {
             background: url(../images/backgrounds/bg-wood-top.png) repeat-x center center;
             height:21px;
@@ -121,7 +123,7 @@ body {
 // header section
 
 .section-top {
-    height:520px;
+    min-height:520px;
     padding-top:30px;
     .app-buttons {
         margin-left:-8px;
@@ -241,12 +243,14 @@ body {
             right:-150px;
         }
         &.bike {
-            left:130px;
-            top:10px;
-            background:url(../images/elements/bike.png) center center no-repeat;
+            position:relative;
+         //   background:url(../images/elements/bike.png) center center no-repeat;
             background-size: cover;
-            width:242px;
-            height:238px;
+
+        }
+        &.dish {
+            position:relative;
+
         }
     }
 }
@@ -390,15 +394,102 @@ body {
 .mobile {
     display: none;
 }
-@media only screen and (max-width : 768px) {
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+    .elements .element.bike {
+        position:relative;
+        left:auto;
+        top:auto;
+        text-align: center;
+        img {
+            max-width:85%;
+            width: 85%;
+        }
+    }
+    body section.section-feature {
+        padding: 30px 0px 40px 0px;  
+    }
+    section .row {
+        overflow: hidden;
+    }
+    .element img {
+        width:100%;
+    }
+    #pizza img {
+        margin-top:70px;
+        width:100%;
+    }
+    .section-feature.the-apps .the-food {
+        display: none;
+    }
+    #footer .boss {
+        right: -150px;
+        bottom: -30px;
+        width: 550px;
+        position: absolute;
+    }
+    #footer  {
+        padding-bottom:0;
+    }
+}
+
+@media only screen and (max-width : 765px) {
+    .image-top {
+        margin-bottom:70px;
+    }
     .mobile {
         display: block;
     }
-
-    .section-top .image, .elements, .elements .element, .image {
-        display: none;
+    .element img {
+        width:100%;
+    }
+    .elements .element.bike {
+        position: relative;
+        left:0;
+        top:0;
+    }
+    .dishes {
+        transform:scale(0.6);
     }
 
+    .elements .element.bike {
+        position:relative;
+        left:auto;
+        margin-top:20px;
+        top:auto;
+        text-align: center;
+        img {
+            max-width:75%;
+            width: 75%;
+        }
+    }
+
+    #dishes .element img {
+        width:100%;
+    }
+
+    .section-feature .image {
+      //  margin-bottom:60px;
+    }
+
+    #footer .boss {
+        right: -150px;
+        bottom: -40px;
+        width: 400px;
+    }
+
+    .footer-text {
+        z-index:7;
+    }
+    #top .social-top {
+        display: none;
+    }
+    #dishes, #pizza {
+         display: none;   
+    }
+    .the-food {
+        display: none;
+    }
     .section-top .caption {
         margin-top:20px;
     }
@@ -408,8 +499,25 @@ body {
         font-size: 14px;
     }
 
+    .section-feature {
+        padding: 20px;
+    }
+    .elements.apps  {
+          height:280px;      
+    }
+    .apps {
+
+        .element img {
+            width:130px;
+        }
+    }
+    .elements .element.app-1 {
+        left:45px;
+    }
     .section-top {
         .caption {
+            padding-left:20px;
+            padding-right:20px;
             p {
                 font-size:20px;
                 line-height:26px;
@@ -476,6 +584,9 @@ body {
     }
 }
 
+#footer {
+    overflow: hidden;
+}
 .section-top .social-buttons {
     i {
         font-size:36px;
