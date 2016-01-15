@@ -17,24 +17,26 @@
 
         <link rel="apple-touch-icon" href="images/touch.png" />
 
-        <!-- <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
+       <link rel="stylesheet/less" type="text/css" href="styles/styles.less" />
 
-        <link rel="stylesheet" type="text/css" href="build/styles.css" /> -->
+       <!-- <link rel="stylesheet" type="text/css" href="build/styles.css" /> -->
 
-        <link rel="stylesheet" type="text/css" href="build/styles.css" />
 
         <script>var less=less||{};less.env='development';</script>
 
-        <script src="libs/less/dist/less.min.js"></script>
+        <script src="libs/less/dist/less.min.js"></script> 
 
         <script type="text/javascript">
              less.env = "development";
              less.watch();
         </script>
 
+        <style>
+
+        </style>
     </head>
     <body>
-        <header class="top black" id="top">
+        <header class="top" id="top">
             <div class="container">
                 <div class="logo">
                     <img src="images/logo.png">
@@ -45,12 +47,12 @@
                     <a href="http://www.facebook.com/qucklyrussia/?fref=ts"><i class="icon-fb"></i></a>
                     <a href="http://www.instagram.com/quickly_russia/"><i class="icon-instagram"></i></a>
                 </div>
-                <div class="app-buttons">
-                    <a href="https://appsto.re/ru/MNUW-.i" target="_blank" id="appstore"><img src="images/button-appstore.png"></a>
-                    <!-- <a href="#" id="googleplay"><img src="images/button-googleplay.png"></a> -->
+                <div class="app-links">
+                    <a href="#" сlass="btn-app" id="app-top"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                 </div>
                 <div class="right">
                     <a class="phone" href="tel://83532285018">8 (3532) 28-50-12</a>
+                    <a class="operator" id="login" href="http://quickly.su/app/operator"><i class="icon-login"></i></a>
                 </div>
             </div>
         </header>
@@ -62,10 +64,13 @@
                         <p>Быстрая <b>доставка</b> еды <b>на дом</b> и <b>бронь стола</b> в любимом заведении</p>
                         <hr>
                         <span>За пару кликов в <b>Квикли</b></span>
-                        <div class="app-buttons">
-                            <a href="https://appsto.re/ru/MNUW-.i" target="_blank" id="appstore"><img src="images/button-appstore.png"></a>
-                            <!-- <a href="#" id="googleplay"><img src="images/button-googleplay.png"></a> -->
+
+                        <div class="app-links">
+                            <a href="#" сlass="application" id="app"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                         </div>
+                        
+                        <!-- <a href="#" id="googleplay"><img src="images/button-googleplay.png"></a> -->
+
                         <div class="social-buttons mobile">
                             <a href="http://vk.com/quickly_russia" target="_blank"><i class="icon-vk"></i></a>
                             <a href="http://ok.ru/group/52621016695005" target="_blank"><i class="icon-ok"></i></a>
@@ -141,7 +146,7 @@
                     <div class="col-lg-7 col-sm-6 col-xs-12">
                         <div class="caption">
                             <h3>Мы возвращаем ваши деньги!</h3>
-                            <p>Quickly возвращает часть от суммы каждого заказа и зачисляет на ваш личный счет в виде рублей. Эти деньги вы можете использовать при любом следующем заказе или же обменять их на ценные подарки из нашего каталога, это может быть, как аксессуар для вашего телефона, так и сам мобильный телефон или планшет, даже мультиварка или фен!</p><p>Посмотрите какие призы вы можете получить, просто делая заказы через наш сервис: <a href="#">посмотреть</a></p>
+                            <p>Quickly возвращает часть от суммы каждого заказа и зачисляет на ваш личный счет в виде рублей. Эти деньги вы можете использовать при любом следующем заказе.</p>
                         </div>
 <!--                          <div class="buttons">
                             <div class="row">
@@ -175,12 +180,11 @@
                         <div class="caption">
                             <h3>QUICKLY &mdash; Всегда с вами</h3>
                             <p>Специально для вашего удобства мы разработали мобильное приложение, в котором вы, так же как на сайте, в несколько простых действий можете заказать еду на дом или забронировать свободный столик в ресторане.</p>
-                            <p>Оно абсолютно бесплатно, более того мы начислим вам 200 баллов за его установку!</p>
+                            <p>Оно абсолютно бесплатно, более того, мы начислим 100 рублей на ваш счет за установку!</p>
                             <p>Держите удобный сервис бронирования столиков и доставки еды всегда под рукой.</p>
                         </div>
-                        <div class="app-buttons">
-                            <a href="https://appsto.re/ru/MNUW-.i" id="appstore" target="_blank"><img src="images/button-appstore.png"></a>
-                            <!-- <a href="#" id="googleplay"><img src="images/button-googleplay.png"></a> -->
+                        <div class="app-links">
+                            <a href="#" сlass="btn-app" id="app-bottom"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                         </div>
                         <div class="absolute the-food">
                             <div class="elements foods-1">
@@ -208,44 +212,44 @@
                             <h3>QUICKLY создан экономить ваше время</h3>
                             <p>При создании сервиса Quickly самым важным для нашей команды было создать такой продукт, который позволит вам достичь желаемого результата используя минимум усилий и времени. Ведь время наш самый важный и невосполнимый ресурс.</p>
                             <p>Мы проделали огромный путь в тысячи часов, чтобы отточить каждый этап и элемент, убрать все лишнее, а процесс заказа еды на дом и бронирования стола стал проще, чем пожарить яичницу на завтрак.</p>
-                            <p>Но в нашем мире нет предела совершенству, поэтому если вы считаете, что где-то мы не доработали или можем что-то сделать лучше для вас, пожалуйста напишите мне об этом: <a href="mailto:nesterov@mail.ru">nesterov@mail.ru</a></p>
+                            <p>Но в нашем мире нет предела совершенству, поэтому если вы считаете, что где-то мы не доработали или можем что-то сделать лучше для вас, пожалуйста напишите мне об этом: <a href="mailto:chief@quickly.su">chief@quickly.su</a></p>
                         </div>
-                        <hr>
-                        <div class="social-links">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <p>И давайте дружить в соц.сетях:</p>
-                                    <div class="links">
-                                        <a href="http://vk.com/quickly_russia" target="_blank"><i class="icon-vk"></i></a>
-                                        <a href="http://ok.ru/group/52621016695005" target="_blank"><i class="icon-ok"></i></a>
-                                        <a href="https://www.facebook.com/qucklyrussia/?fref=ts" target="_blank"><i class="icon-fb"></i></a>
-                                        <a href="https://www.instagram.com/quickly_russia/" target="_blank"><i class="icon-instagram"></i></a>
+                        <hr style="opacity:0">
+                        <hr class="last" style="opacity:0">
+                         <p class="signature">
+                              <b>Дмитрий Нестеров</b>
+                              <span>шеф повар проекта</span>
+                              <div class="the">
+                                <img src="images/signature.png">
+                              </div>
+                          </p>
+                    </div>
+                </div>
+            </div>
+             <div id="the-chief" class="the-chief">
+                <div class="chief">
+                    <img src="images/boss.png">
+                    <div class="container copyrights" style="">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <p class="copy">
+                                    &copy; 2015<br>
+                                    Quickly. Все права защищены.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <div class="social-links">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="links">
+                                                <a href="http://vk.com/quickly_russia" target="_blank"><i class="icon-vk"></i></a>
+                                                <a href="http://ok.ru/group/52621016695005" target="_blank"><i class="icon-ok"></i></a>
+                                                <a href="https://www.facebook.com/qucklyrussia/?fref=ts" target="_blank"><i class="icon-fb"></i></a>
+                                                <a href="https://www.instagram.com/quickly_russia/" target="_blank"><i class="icon-instagram"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <hr class="last">
-                        <div class="footer">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <p class="copy">
-                                        &copy; 2015<br>
-                                        Quickly. Все права защищены.
-                                    </p>
-                                </div>
-                                <div class="col-lg-6">
-                                    <p class="signature">
-                                        Дмитрий Нестеров<br>
-                                        шеф повар проекта
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 image">
-                        <div class="elements person">
-                            <div class="element boss">
-                                <img src="images/boss.png">
                             </div>
                         </div>
                     </div>
@@ -258,18 +262,19 @@
 
         <!-- services -->
  
-        <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-        document,'script','//connect.facebook.net/en_US/fbevents.js');
+    <!--    <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','//connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '220760948263112');
-        fbq('track', "PageView");</script>
+            fbq('init', '220760948263112');
+            fbq('track', "PageView");
+        </script>
         <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=220760948263112&ev=PageView&noscript=1"
-        /></noscript>
+        /></noscript> -->
 
     </body>
 </html>

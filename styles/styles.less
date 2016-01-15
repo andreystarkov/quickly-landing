@@ -19,7 +19,7 @@ section, header {
     width:100%;
     position:relative;
     &.black {
-        background: url(../images/backgrounds/bg-black.jpg) repeat center center;
+        background: url(../images/backgrounds/bg-black.jpg) repeat top center;
 
     }
     &.wooden {
@@ -52,7 +52,6 @@ section, header {
 
 // page's header
 
-
 body {
    padding-top: 118px;
 }
@@ -63,14 +62,15 @@ body {
 .top .app-buttons {
     display: none;
 }
+
 .top {
     top:0;
-    height:118px;
+    height:80px;
     z-index:6666666 !important;
     position:absolute;
-
     padding-top:25px;
     &.toggled {
+        padding-top:3px;
         .app-buttons {
             display: inline-block;
             position:absolute;
@@ -80,9 +80,15 @@ body {
                 width: 250px;       
             }
         }
+        .logo {
+          margin-top:35px;
+          background: #111;
+        }
         background:#111;
     }
     .logo {
+        //margin-top:25px;
+        border-radius:100px;
         float: left;
     }
     .right {
@@ -269,7 +275,7 @@ body {
 .social-links {
     .links {
         a i {
-            color: @colorWhite;
+            color: fade(#000,70%);
             font-size: 33px;
         }
     }
@@ -284,6 +290,9 @@ body {
 
 #footer {
     padding-bottom:30px;
+    background: url(../images/backgrounds/bg-black.jpg);
+    position: relative;
+
 }
 
 .social-top a {
@@ -295,6 +304,81 @@ body {
     }
 }
 
+#login {
+    display: inline-block;
+    margin-left:15px;
+    font-size:26px;
+    color:#fff;
+}
+
+#app-top {
+    padding:6px 16px;
+    border-radius:6px;
+    display:inline-block;
+    transition: 0.4s linear all;
+    position:absolute;
+    border: 1px solid fade(#fff,15%);
+    left:180px;
+    top:14px;
+    span {
+        font-size:18px;
+        font-family:@fontLight;
+        color:fade(#fff,85%);
+        text-shadow:0 0 3px #000;
+    }
+    i {
+        font-size:20px;
+        color:#fff;
+        display:inline-block;
+        text-shadow: 0 0 3px #000;
+        margin-right:15px;
+    }
+    &:hover {
+        background:lighten(#111, 7%);
+        box-shadow:0 2px 8px solid #000;
+     //   transform:rotateX(-15deg) perspective(50px);
+    }  
+}
+
+#app, .btn-app, #app-bottom {
+    padding: 16px 26px;
+    background:lighten(#111,3%);
+    border-radius:6px;
+    border-bottom: 4px solid #111;
+    box-shadow:0 1px 6px fade(#000,90%);
+    display: inline-block;
+    transition: 0.4s linear all;
+    margin-top:40px;
+    span {
+        font-size:22px;
+        font-family:@fontRegular;
+        color:#fff;
+    }
+    i {
+        font-size:30px;
+        color:#fff;
+        display:inline-block;
+        margin-right:30px;
+    }
+    &:hover {
+        background:lighten(#111, 8%);
+        border-bottom:4px solid lighten(#111,4%);
+        box-shadow:0 2px 8px solid #000;
+     //   transform:rotateX(-15deg) perspective(50px);
+    }
+}
+
+#footer .copyrights {
+position: absolute;
+    bottom: 10px;
+    left: 13%;
+    b {
+        font-family:@fontRegular;
+        display: block;
+        font-size:13px;
+        color:#000;
+    }
+}
 .section-feature {
     padding:80px 30px 100px 30px;
     color:@colorWhite;
@@ -365,7 +449,10 @@ body {
             }
         }
     }
-
+    #the-chief, .the-chief {
+        position: absolute;
+        top:0px;
+    } 
     &.black {
         .button {
             color:@colorYellow;
@@ -396,7 +483,32 @@ body {
     display: none;
 }
 
+.signature {
+    b {
+        color:#fff !important;
+        display:block;
+        font-family:@fontRegular;
+        font-size:26px;
+    }
+    span {
+
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    body p.signature {
+        margin-top:120px;
+    }
+}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+    .copyrights .signature {
+        b {
+            font-size:14px;
+        }
+        span {
+            font-size:12px;
+        }
+    }
     .elements .element.bike {
         position:relative;
         left:auto;
@@ -406,6 +518,14 @@ body {
             max-width:85%;
             width: 85%;
         }
+    }
+    #app-top {
+        display: none;
+    }
+    #footer .copyrights {
+        position:absolute;
+        bottom: 0 !important;
+        left:0 !important;
     }
     body section.section-feature {
         padding: 30px 0px 40px 0px;  
@@ -424,17 +544,129 @@ body {
         display: none;
     }
     #footer .boss {
-        right: -150px;
-        bottom: -30px;
-        width: 550px;
+        width:100%;
         position: absolute;
     }
     #footer  {
         padding-bottom:0;
     }
+    #app, .btn-app, #app-bottom {
+        i {
+            margin-right:7px;
+        }
+        span {
+            font-size:18px;
+        }
+        padding: 6px 12px 6px;
+    }
+    #the-chief img {
+        display: block;
+        position:absolute;
+        bottom:0;
+    }
+    #footer {
+        padding-bottom:120px !important;
+    }
 }
 
+@media only screen and (max-width : 765px) and (orientation : landscape) {
+    body #the-chief img {
+        width:100%;
+        left:0% !important;
+    }
+    .section-top .caption hr {
+        display: none;
+    }
+    .section-top .caption p {
+        margin: 0 auto;
+    }
+}
 @media only screen and (max-width : 765px) {
+    body .signature {
+        b {
+            font-size:10px;
+        }
+        span {
+            font-size:8px;
+        }
+
+    }
+    body {
+        .section-feature h2, .section-feature h3, .section-feature h4 {
+            font-size:16px;
+        }
+    }
+    .the {
+        position:relative;
+        height:80px;
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: rotate(-10deg) scale(1.7) translate(-25px, 25px);
+        }
+    }
+    body .section-feature p {
+        font-size:12px;
+    }
+    .section-top .caption hr { margin: 0 auto; }
+    .section-top .caption span { text-align: center; }
+    .links {
+        margin-top:30px;
+
+    }
+    .section-top *, .section-top {
+        text-align: center;
+    }
+    body .section-top {
+        .caption {
+            text-align: center
+        }
+    }
+    .social-links .links a i { font-size:18px; }
+    .the img {
+        width:100px;
+    }
+    body .top .logo img { width: 70%; }
+    .lets-be-friends {
+        font-size:12px !important;
+    }
+    body #footer .copyrights {
+        .copy {
+            font-size:10px;
+        }
+        padding-left:0;
+        left: 15px;
+        bottom: -10px !important;
+        b {
+            padding-left:30px; font-size:12px !important;
+        }
+        span {
+            padding-left:30px; font-size:10px;
+        }
+    }
+    #the-chief img {
+        display: block;
+        position:absolute;
+        bottom:0;
+    }
+
+    body #the-chief img {
+        width:200%;
+        left:-80%;
+    }
+    .top {
+        .operator, .app-links { display: none !important; }
+    }
+    #app, .btn-app, #app-bottom {
+        i {
+            margin-right:7px;
+        }
+        span {
+            font-size:18px;
+        }
+        padding: 6px 12px 6px;
+    }
     .image-top {
         margin-bottom:40px;
     }
@@ -598,9 +830,30 @@ body {
     }
 }
 
+.copyrights p {
+    color: #111;
+}
 #footer {
     overflow: hidden;
+    padding-bottom:420px;
+    .the-chief {
+        position: absolute;
+        top: 100px;
+    }
 }
+
+#the-footer {
+    position:absolute;
+    left:0;
+    bottom:0;
+    .the-boss {
+        width:100%;
+        img {
+            width:100%;
+        }
+    }
+}
+ 
 .section-top .social-buttons {
     i {
         font-size:36px;
@@ -612,5 +865,5 @@ body {
 .social-top {
     position:absolute;
     top:15px;
-    right:340px;
+    right:420px;
 }

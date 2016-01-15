@@ -8,6 +8,10 @@ $(function() {
         $(this).append('<div class="line-bottom"></div>');
     });
 
+    $('#the-chief').css({'position': 'absolute', bottom: '0px', left: '0', width: '100%'});
+    $('.chief img').css({'width': '100%'});
+    $('#footer').css({'padding-bottom': '120px'});
+    $('#footer .copyrights').css({bottom: '10px'});
     // right section order (for scroll animation)
 
     $('.section-feature').each(function(i, e) {
