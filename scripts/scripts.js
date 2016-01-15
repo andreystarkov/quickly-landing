@@ -10,7 +10,7 @@ $(function() {
 
     $('#the-chief').css({'position': 'absolute', bottom: '0px', left: '0', width: '100%'});
     $('.chief img').css({'width': '100%'});
-    $('#footer').css({'padding-bottom': '120px'});
+    $('#footer').css({'padding-bottom': '0px'});
     $('#footer .copyrights').css({bottom: '10px'});
     // right section order (for scroll animation)
 

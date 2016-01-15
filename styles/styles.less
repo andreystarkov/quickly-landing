@@ -484,9 +484,11 @@ position: absolute;
 }
 
 .signature {
+    position:relative;
     b {
         color:#fff !important;
         display:block;
+        margin-bottom:10px;
         font-family:@fontRegular;
         font-size:26px;
     }
@@ -494,13 +496,78 @@ position: absolute;
 
     }
 }
+
+#footer {
+    padding:0;
+}
+
+.sign img {
+    margin-top:20px;
+}
+.footer-chief {
+    .sign {
+        margin-top:20px;
+    }
+
+    position:relative;
+    height:260px;
+    .cf {
+        img {
+            right:15%;
+            z-index:666;
+            bottom:7px;
+            position:absolute;
+        }
+    }
+    .tile {
+        position:absolute;
+        left:0;
+        bottom:0;
+        right:0;
+        width:100%;
+        height:110px;
+        background:url(../images/tile.png) repeat-x top center;
+    }
+}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
     body p.signature {
         margin-top:120px;
     }
 }
 
+.cpy, .social-bottom {
+    color:#111;
+}
+
+.social-bottom a i {
+    color:#111;
+}
+
+.tile {
+    padding-top:30px;
+}
+
+.social-bottom {
+    font-size:28px;
+    margin-top:15px;
+}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
+    .footer-chief .cf img {
+        right: 15%;
+        z-index: 666;
+        bottom: 34px;
+        position: absolute;
+        width: 70%;
+    }
+    .cpy, .social-bottom {
+        font-size:14px;
+    }
+    #footer {
+        padding-bottom:0px;
+        padding-top:50px;
+    }
     .copyrights .signature {
         b {
             font-size:14px;
@@ -508,6 +575,16 @@ position: absolute;
         span {
             font-size:12px;
         }
+    }
+
+    .cpy {
+
+    }
+    .social-bottom {
+        a i {
+        font-size:18px;
+        }
+        margin-top:15px;
     }
     .elements .element.bike {
         position:relative;
@@ -565,7 +642,7 @@ position: absolute;
         bottom:0;
     }
     #footer {
-        padding-bottom:120px !important;
+ //       padding-bottom:120px !important;
     }
 }
 
@@ -581,10 +658,45 @@ position: absolute;
         margin: 0 auto;
     }
 }
+
 @media only screen and (max-width : 765px) {
+    .footer-chief .cf img {
+        width:95%;
+        left:2%;
+        bottom:68px
+    }
+    .cpy {
+        font-size:12px;
+    }
+    .social-bottom {
+        a i {
+        font-size:18px;
+        }
+        margin-top:15px;
+    }
+    .signature {
+        position: relative;
+        height: 80px;
+    }
+    .sign img {
+        position: absolute;
+        right: 0;
+        top: 120px;
+        transform: rotate(-10deg);
+    }
+    .footer-chief {
+        width:320px;
+    }
+    body .sign img {
+    
+    }
+    #footer {
+
+    }
     body .signature {
         b {
-            font-size:10px;
+            font-size:12px;
+            margin-bottom:3px;
         }
         span {
             font-size:8px;
@@ -715,8 +827,13 @@ position: absolute;
         width: 450px;
     }
 
+    #footer .copy {
+        color:#111;
+        margin-top:50px;
+    }
+
     .footer-text {
-        z-index:7;
+        z-index:77777;
     }
     #top .social-top {
         display: none;
