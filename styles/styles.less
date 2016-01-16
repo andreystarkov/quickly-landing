@@ -484,6 +484,7 @@ position: absolute;
 }
 
 .signature {
+    text-align: right;
     position:relative;
     b {
         color:#fff !important;
@@ -498,7 +499,10 @@ position: absolute;
 }
 
 #footer {
-    padding:0;
+    padding-left:0;
+    padding-right:0;
+    padding-bottom:0;
+    padding-top:40px;
 }
 
 .sign img {
@@ -510,10 +514,10 @@ position: absolute;
     }
 
     position:relative;
-    height:260px;
+    height:220px;
     .cf {
         img {
-            right:15%;
+            right:3%;
             z-index:666;
             bottom:7px;
             position:absolute;
@@ -534,6 +538,9 @@ position: absolute;
     body p.signature {
         margin-top:120px;
     }
+    .footer-chief .cf img {
+        width:500px !important;
+    }
 }
 
 .cpy, .social-bottom {
@@ -550,7 +557,7 @@ position: absolute;
 
 .social-bottom {
     font-size:28px;
-    margin-top:15px;
+    margin-top:0px;
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
@@ -646,6 +653,12 @@ position: absolute;
     }
 }
 
+@media only screen and (min-height : 1400px){
+    .footer-chief .cf img {
+        right:5%;
+    }
+}
+
 @media only screen and (max-width : 765px) and (orientation : landscape) {
     body #the-chief img {
         width:100%;
@@ -659,20 +672,31 @@ position: absolute;
     }
 }
 
+.tile span { color: #111; }
+
 @media only screen and (max-width : 765px) {
+    #footer {
+        padding-top:80px;
+    }
     .footer-chief .cf img {
         width:95%;
-        left:2%;
-        bottom:68px
+        right:2%;
+        bottom:60px;
+    }
+    .footer-chief {
+        height:270px;
     }
     .cpy {
+        font-size:12px;
+    }
+    .tile span {
         font-size:12px;
     }
     .social-bottom {
         a i {
         font-size:18px;
         }
-        margin-top:15px;
+        margin-top:0px;
     }
     .signature {
         position: relative;
@@ -683,9 +707,6 @@ position: absolute;
         right: 0;
         top: 120px;
         transform: rotate(-10deg);
-    }
-    .footer-chief {
-        width:320px;
     }
     body .sign img {
     
@@ -828,7 +849,6 @@ position: absolute;
     }
 
     #footer .copy {
-        color:#111;
         margin-top:50px;
     }
 

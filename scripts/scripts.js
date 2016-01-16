@@ -78,7 +78,7 @@ $(function() {
 
     //    addAnimation('.section-top .center', 'lightSpeedIn', '1.3s');
 
-        addAnimation('.section-feature', 'slideInDown', '0');
+      //  addAnimation('.section-feature', 'slideInDown', '0');
     //    addAnimation('#bike', 'bounceInLeft', '1s');
 
     //    addAnimation('.section-feature h3', 'fadeInDown', '1.2s');
