@@ -38,13 +38,13 @@
                     <img src="images/logo.png">
                 </div>
                 <div class="social-top">
-                    <a href="http://vk.com/quickly_russia"><i class="icon-vk"></i></a>
-                    <a href="http://ok.ru/group/52621016695005"><i class="icon-ok"></i></a>
-                    <a href="http://www.facebook.com/qucklyrussia/?fref=ts"><i class="icon-fb"></i></a>
-                    <a href="http://www.instagram.com/quickly_russia/"><i class="icon-instagram"></i></a>
+                    <a class="vk" href="http://vk.com/quickly_russia"><i class="icon-vk"></i></a>
+                    <a class="ok" href="http://ok.ru/group/52621016695005"><i class="icon-ok"></i></a>
+                    <a class="fb" href="http://www.facebook.com/qucklyrussia/?fref=ts"><i class="icon-fb"></i></a>
+                    <a class="inst" href="http://www.instagram.com/quickly_russia/"><i class="icon-instagram"></i></a>
                 </div>
                 <div class="app-links">
-                    <a href="https://appsto.re/ru/MNUW-.i" сlass="btn-app" id="app-top"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
+                    <a href="https://appsto.re/ru/MNUW-.i" сlass="app-btn btn-app btn-top" id="app-top"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                 </div>
                 <div class="right">
                     <a class="phone" href="tel://83532285018">8 (3532) 28-50-12</a>
@@ -62,16 +62,16 @@
                         <span>За пару кликов в <b>Квикли</b></span>
 
                         <div class="app-links">
-                            <a href="https://appsto.re/ru/MNUW-.i" сlass="application" id="app"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
+                            <a href="https://appsto.re/ru/MNUW-.i" сlass="app-btn btn-header application" id="app"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                         </div>
                         
                         <!-- <a href="https://appsto.re/ru/MNUW-.i" id="googleplay"><img src="images/button-googleplay.png"></a> -->
 
                         <div class="social-buttons mobile">
-                            <a href="http://vk.com/quickly_russia" target="_blank"><i class="icon-vk"></i></a>
-                            <a href="http://ok.ru/group/52621016695005" target="_blank"><i class="icon-ok"></i></a>
-                            <a href="https://www.facebook.com/qucklyrussia/?fref=ts" target="_blank"><i class="icon-fb"></i></a>
-                            <a href="https://www.instagram.com/quickly_russia/" target="_blank"><i class="icon-instagram"></i></a>
+                            <a href="http://vk.com/quickly_russia" target="_blank" class="vk"><i class="icon-vk"></i></a>
+                            <a href="http://ok.ru/group/52621016695005" target="_blank" class="ok"><i class="icon-ok"></i></a>
+                            <a href="https://www.facebook.com/qucklyrussia/?fref=ts" class="fb" target="_blank"><i class="icon-fb"></i></a>
+                            <a href="https://www.instagram.com/quickly_russia/" class="inst" target="_blank"><i class="icon-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 image" id="pizza">
@@ -180,7 +180,7 @@
                             <p>Держите удобный сервис бронирования столиков и доставки еды всегда под рукой.</p>
                         </div>
                         <div class="app-links">
-                            <a target="_blank" href="https://appsto.re/ru/MNUW-.i" сlass="btn-app" id="app-bottom"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
+                            <a target="_blank" href="https://appsto.re/ru/MNUW-.i" сlass="btn-app btn-bottom" id="app-bottom"><i class="icon-apple"></i><span>Скачать в App Store</span></a>
                         </div>
                         <div class="absolute the-food">
                             <div class="elements foods-1">
@@ -232,10 +232,10 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="z-index: initial">
                                 <span>давайте дружить в соц. сетях!</span>
                                 <div class="social-bottom" style="z-index:99999999999">
-                                    <a href="http://vk.com/quickly_russia"><i class="icon-vk"></i></a>
-                                    <a href="http://ok.ru/group/52621016695005"><i class="icon-ok"></i></a>
-                                    <a href="http://www.facebook.com/qucklyrussia/?fref=ts"><i class="icon-fb"></i></a>
-                                    <a href="http://www.instagram.com/quickly_russia/"><i class="icon-instagram"></i></a>
+                                    <a href="http://vk.com/quickly_russia" class="vk" target="_blank"><i class="icon-vk"></i></a>
+                                    <a href="http://ok.ru/group/52621016695005" class="ok" target="_blank"><i class="icon-ok"></i></a>
+                                    <a href="http://www.facebook.com/qucklyrussia/?fref=ts" target="_blank" class="fb"><i class="icon-fb"></i></a>
+                                    <a href="http://www.instagram.com/quickly_russia/" target="_blank" class="inst"><i class="icon-instagram"></i></a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -277,10 +277,50 @@
 
     <script>
     jQuery(document).ready(function($) {
-        $('#app-bottom').click(function(){
+        $('.app-btn').click(function(){
             ga('send', 'event', 'app_link', 'click', 'ios');
+        });
+        $('.vk').click(function(){
+            ga('send', 'event', 'social', 'click', 'vk');
+        });
+        $('.fb').click(function(){
+            ga('send', 'event', 'social', 'click', 'fb');
+        });
+        $('.ok').click(function(){
+            ga('send', 'event', 'social', 'click', 'ok');
+        });
+        $('.inst').click(function(){
+            ga('send', 'event', 'social', 'click', 'inst');
         });
     });
     </script>
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter34753250 = new Ya.Metrika({
+                        id:34753250,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/34753250" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     </body>
 </html>
