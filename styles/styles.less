@@ -340,7 +340,11 @@ body {
     }  
 }
 
-#app, .btn-app, #app-bottom {
+#btn-login {
+    display:block;
+}
+
+#app, .btn-app, #app-bottom, #applicaion, #btn-login, #app-header {
     padding: 16px 26px;
     background:lighten(#111,3%);
     border-radius:6px;
@@ -433,7 +437,7 @@ position: absolute;
         .the-food {
             width:320px;
             height:360px;
-            bottom: -160px;
+            bottom:0px;
             right:0px;
             .foods-1 {
                 width:320px;
@@ -634,7 +638,7 @@ position: absolute;
     #footer  {
         padding-bottom:0;
     }
-    #app, .btn-app, #app-bottom {
+    #app, .btn-app, #app-bottom, #applicaion, #btn-login, #app-header {
         i {
             margin-right:7px;
         }
@@ -668,6 +672,12 @@ position: absolute;
         left:6% !important;
 
     }
+    .signature {
+        padding-right:240px;
+    }
+    .sign img {
+        right:20% !important;
+    }
     .section-top .caption hr {
         display: none;
     }
@@ -679,8 +689,14 @@ position: absolute;
 .tile span { color: #111; }
 
 @media only screen and (max-width : 765px) {
+    #btn-login {
+        padding-left:10px;
+    }
     #footer {
         padding-top:80px;
+    }
+    .app-links {
+        text-align: center;
     }
     .footer-chief .cf img {
         width:95%;
@@ -720,7 +736,7 @@ position: absolute;
     }
     body .signature {
         b {
-            font-size:12px;
+            font-size:10px;
             margin-bottom:3px;
         }
         span {
@@ -795,7 +811,7 @@ position: absolute;
     .top {
         .operator, .app-links { display: none !important; }
     }
-    #app, .btn-app, #app-bottom {
+    #app, .btn-app, #app-bottom, #applicaion, #btn-login, #app-header {
         i {
             margin-right:7px;
         }
