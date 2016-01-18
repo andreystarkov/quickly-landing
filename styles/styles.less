@@ -437,7 +437,7 @@ position: absolute;
         .the-food {
             width:320px;
             height:360px;
-            bottom:0px;
+            bottom:-200px;
             right:0px;
             .foods-1 {
                 width:320px;
@@ -657,15 +657,19 @@ position: absolute;
     }
 }
 
-@media only screen and (min-height : 1400px){
+@media only screen and (min-width : 1400px){
     .footer-chief .cf img {
         right:5%;
+    }
+    .footer-text hr {
+        display: none;
     }
 }
 
 #footer .container {
     z-index:999999999;
 }
+
 @media only screen and (max-width : 765px) and (orientation : landscape) {
     body .footer-chief .cf img {
         width:55%;
@@ -687,6 +691,10 @@ position: absolute;
 }
 
 .tile span { color: #111; }
+
+.btn-login-bottom {
+    display: block;
+}
 
 @media only screen and (max-width : 765px) {
     #btn-login {
@@ -730,9 +738,6 @@ position: absolute;
     }
     body .sign img {
     
-    }
-    #footer {
-
     }
     body .signature {
         b {
